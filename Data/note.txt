@@ -1,0 +1,2 @@
+floder fake data
+fake data luư dưới dạng mảng, mỗi phần tử trong trong mảng là một object luư thông tin sản phẩm
