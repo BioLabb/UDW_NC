@@ -1,0 +1,285 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Arial Helvetica ;
+}
+
+#main {
+
+}
+
+.clear {
+	clear: both;
+}
+
+#header {
+	height: 47px;
+	background-color: #b29c6e;
+}
+
+#header .adress {
+	font-size: 13px;
+	margin-left: 40px;
+	padding-top: 12px;
+	color: #fff;
+	float: left;
+}
+
+#header .adress-icon:hover {
+	color: yellow;
+	cursor: pointer;
+}
+
+#header .header-right {
+	float: right;
+   padding: 6px 40px;
+}
+
+#header .phone-num {
+	font-size: 14px;
+	color: #fff;
+	display: inline-block;
+	padding-right: 20px;
+}
+
+#header .header-search {
+	padding: 8px;
+	border: none;
+}
+
+#header .header-search-icon {
+  position: absolute;
+  color: rgba(0,0,0,0.6);
+  font-size: 23px;
+  top: 11px;
+  right: 45px;
+}
+
+#header .header-search-icon:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+#nav-contaner {
+
+}
+
+#nav-contaner .nav-logo {
+	text-align: center;
+	margin: 25px 50px;
+}
+
+#nav-contaner .nav-logo-link {
+
+}
+
+#nav-contaner .nav-logo-img {
+    width: 150px;
+    margin: 0 auto;
+}
+
+#nav {
+	margin: 0 auto ;
+	text-align: center;
+  padding-bottom: 34px;
+  position: relative;
+}
+
+#nav > li {
+	display: inline-block;
+	padding: 10px 0;
+	border-left: 1px solid #53534a;
+	opacity: 0.85;
+}
+
+#nav .nav-last {
+	border-right: 1px solid #53534a;
+}
+
+#nav .subnav-list:hover a,
+#nav > li:hover > a {
+	color: #000;
+	text-decoration: underline rgba(204, 153, 0,0.4);
+	opacity: 1;
+}
+
+#nav > li > a {
+	color: #53534a ;
+	font-size: 15px;
+	padding: 0 30px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#nav > li:hover .subnav {
+	display: block;
+}
+
+#nav .subnav {
+  width: 100%;
+  height: 476px;
+  background-color: #ddd;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  list-style-type: none;
+  padding: 40px 140px;
+  float: left;
+  z-index: 1;
+  display: none;
+}
+
+#nav .subnav .subnav-list {
+  font-size: 14px;
+  display: inline-block;
+  width: 24%;
+	opacity: 0.75;
+  margin: 9px 0;
+  text-align: left;
+}
+
+#nav .subnav-list::first-letter {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+#nav .subnav .subnav-link {
+	text-decoration: none;
+	color: #53534a;
+	text-transform: uppercase;
+}
+
+#id {
+
+}
+
+#slides .slides-img {
+	width: 100%;
+	max-width: 100%;
+	animation: slide ease 4s;
+}
+
+#slides .slides-img:hover {
+	animation: slideHover ease-in 4s;
+	transform: scale(1.1,1);
+	opacity: 0.75;	
+}
+
+#trademark {
+	margin: 0px 82px;
+	padding: 40px 15px 0;
+	font-size: 13px;
+	text-align: center;
+}
+
+#trademark .trademark-heading {
+ 	margin-bottom: 20px;
+ 	text-transform: uppercase;
+ 	display: inline-block;
+ 	font-weight: 500;
+ 	letter-spacing: 4px;
+}
+
+#trademark .trademark-heading:hover {
+	text-decoration: underline;
+}
+
+#trademark .trademark-heading-link {
+	color: #53534a;
+	text-decoration: none;
+}
+
+#trademark .trademark-list {
+  width: 100%;
+  display: block;
+}
+
+#trademark .trademark-heading-icons {
+  position: relative;
+  top: -8px;
+  margin: 0 8px;
+  color: rgba(255,255,255,1);
+  min-width: 60px;
+  border-bottom: 1px solid #ddd7d5;
+  display: inline-block;
+}
+
+#trademark .trademark-list-items {
+  width: 33.333%;
+  display: inline;
+}
+
+#trademark .trader-list-img {
+    max-width: 260px;
+    margin: 0 44px;
+    opacity: 0.5;
+    animation: trademarkImg ease 1s;
+}
+
+#trademark .trader-list-img:hover {
+	animation: trademarkImgHover ease 1s;
+	opacity: 1;
+}
+
+#trademark .trademark-footer {
+	margin: 32px 0;
+}
+
+#trademark .trademark-footer-link {
+	text-decoration: none;
+  font-size: 13px;
+  color: #63635c;
+  padding: 6px 48px;
+  border: 1px solid #d7cfcd;
+  text-transform: uppercase;
+}
+
+#trademark .trademark-footer-link:hover {
+	background-color: #dbb86f ;
+}
+
+
+@keyframes slideHover {
+	from{
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to{
+		transform: scale(1.1,1);
+		opacity: 0.75;
+	}
+}
+
+@keyframes slide {
+	from{
+		transform: scale(1.1,1);
+		opacity: 0.75;		
+	}
+	to{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+
+@keyframes trademarkImgHover {
+	from{
+		opacity: 0.5;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+@keyframes trademarkImg {
+	from{
+		opacity: 1;
+	}
+	to{
+		opacity: 0.5;
+	}
+}
