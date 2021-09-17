@@ -142,6 +142,7 @@ html {
   text-align: left;
 }
 
+
 #nav .subnav-list::first-letter {
   font-size: 15px;
   font-weight: 900;
@@ -242,6 +243,95 @@ html {
 	background-color: #dbb86f ;
 }
 
+.background_page {
+	width: 100%;
+}
+
+.background_page .background__img {
+	width: 100%;
+}
+
+#control {
+	width: 100%;
+	min-width: 100px;
+	background-color: #e2deda;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -4px;
+  color: #53534a;
+}
+
+#control h4 {
+	font-size: 14px;
+}
+
+#control .control__nav {
+	display: inherit;
+}
+
+#control .control__nav__item {
+	padding: 0 10px;
+  border-right: 1px solid;
+  position: relative;
+}
+
+#control .control__nav__item:hover .item__subnav {
+	display: block;
+}
+
+#control .control__name {
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#control .control__nav__icon {
+	font-size: 12px;
+	padding-left: 4px;
+	color: red;
+	font-weight: 900;
+}
+
+#control .item__subnav {
+  list-style-type: none;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  border: 1px solid #53534aa6;
+  min-width: 150px;
+  display: none;
+}
+
+#control .control__first__item .subnav__list::first-letter {
+	font-size: 14px;
+  font-weight: 700;
+}
+
+#control .subnav__list {
+  padding: 2px 7px;
+  margin-right: 16px;
+}
+
+#control .subnav__list:hover .subnav__link {
+	text-decoration: underline;
+}
+
+#control .subnav__link {
+	text-decoration: none;
+  color: #53534a;
+  line-height: 1.35;
+  font-size: 12px;
+  font-family: Arial;
+  padding: 2px 6px;
+}
+
+#control .control__last__item {
+	border: none;
+}
+
+#control .control__space {
+  padding: 18px;
+}
 
 @keyframes slideHover {
 	from{
@@ -277,7 +367,7 @@ html {
 
 @keyframes trademarkImg {
 	from{
-		opacity: 1;
+		opacity: 0.9;
 	}
 	to{
 		opacity: 0.5;
