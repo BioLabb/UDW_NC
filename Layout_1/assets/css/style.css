@@ -6,6 +6,7 @@
 
 html {
 	font-family: Arial Helvetica ;
+	scroll-behavior: smooth;
 }
 
 #main {
@@ -331,6 +332,135 @@ html {
 
 #control .control__space {
   padding: 18px;
+}
+
+#subpage__content {
+ width: 100%;
+ max-width: 1920px;
+ padding-top: 30px;
+}
+
+#subpage__content .content__item {
+	display: inline-block;
+  width: 33.1%;
+  text-align: center;
+  padding: 0px 15px;
+  margin-bottom: 80px;
+}
+
+#subpage__content .content__item:hover .link__img {
+	transform: scale(1.1);
+} 
+
+#subpage__content .content__img {
+	width: 100%;
+  padding-top: 20px;
+}
+
+#subpage__content .content__img .content__link {
+
+}
+
+#subpage__content .content__img .link__img {
+	width: 100%;
+}
+
+
+#subpage__content .content__discription {
+  padding: 35px 0 5px;
+  font-size: 11px;
+  color: #53534a;
+}
+
+#subpage__content .content__discription:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+#subpage__content .content__discription h4 {
+	font-size: 12px;
+  font-family: Helvetica;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+#subpage__content .content__preze {
+	font-size: 14px;
+}
+
+#subpage__content .content__buy {
+	display: inline-block; 
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 8px 0 15px;
+  width: 100%;
+}
+
+#subpage__content .content__preze__sell {
+	display: inline-block;
+  font-weight: 900;
+  margin-right: 8px;
+  text-decoration: line-through;
+}
+
+#subpage__content .content__preze__real {
+  font-weight: 900;
+  color: red;
+}
+
+#subpage__content .content__buy__about {
+	display: inline-block;
+  background-color: #53534a;
+  color: #fff;
+  padding: 6px;
+  width: 50%;
+  cursor: pointer;
+}
+
+#subpage__content .content__buy__about:hover {
+	background-color: #fff;
+	color: #53534a;
+	border: 1px solid #53534a;
+	padding: 5px;
+	margin-right: 2px;
+}
+
+#subpage__content .content__buy__click {
+  display: inline-block;
+  border: 1px solid #53534a;
+  padding: 5px;
+  width: 50%;
+  margin-left: -6px;
+  cursor: pointer;
+}
+
+#up_page {
+	position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #d3cbcb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#up_page .up__page__link {
+  text-decoration: none;
+  padding: 16px;
+}
+
+#up_page .up__page__link:hover .up__icon {
+	opacity: 1;
+}
+
+#up_page .up__icon {
+	color: #000;
+  opacity: 0.7;
+}
+
+
+#subpage__content .content__buy__click:hover {
+	background-color: #dbb86f;
 }
 
 @keyframes slideHover {
