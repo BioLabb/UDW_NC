@@ -1,3 +1,5 @@
+// Mở cửa sổ thông báo khi mua hàng
+
 var orders = document.querySelectorAll(".content__buy__click");
 var imgs = document.querySelectorAll(".link__img");
 
@@ -10,3 +12,4 @@ for(var order of orders)
 
 for(var img of imgs)
 	img.addEventListener("click", clickOrder);
+

@@ -10,7 +10,9 @@ html {
 }
 
 #main {
-
+	text-align:center;
+	max-width: 1920px;
+	margin: auto;
 }
 
 .clear {
@@ -428,8 +430,9 @@ html {
 #subpage__content .content__buy__about {
 	display: inline-block;
   background-color: #53534a;
+  border: 1px solid #d7cfcd;
   color: #fff;
-  padding: 6px;
+  padding: 5px;
   width: 50%;
   cursor: pointer;
 }
@@ -437,18 +440,19 @@ html {
 #subpage__content .content__buy__about:hover {
 	background-color: #fff;
 	color: #53534a;
-	border: 1px solid #53534a;
-	padding: 5px;
-	margin-right: 2px;
 }
 
 #subpage__content .content__buy__click {
   display: inline-block;
-  border: 1px solid #53534a;
+  border: 1px solid #d7cfcd;
   padding: 5px;
   width: 50%;
-  margin-left: -6px;
+  margin-left: -5px;
   cursor: pointer;
+}
+
+#subpage__content .content__buy__click:hover {
+	background-color: #dbb86f;
 }
 
 #up_page {
@@ -476,9 +480,6 @@ html {
 }
 
 
-#subpage__content .content__buy__click:hover {
-	background-color: #dbb86f;
-}
 
 @keyframes slideHover {
 	from{
