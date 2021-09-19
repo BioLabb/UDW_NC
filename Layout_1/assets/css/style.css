@@ -31,7 +31,12 @@ html {
 }
 
 #header a {
+	color: #fff;
 	text-decoration: none;
+}
+
+#header a:hover {
+	opacity: 0.8;
 }
 
 #header .adress-icon {
