@@ -320,6 +320,7 @@ html {
   border: 1px solid #53534aa6;
   min-width: 150px;
   display: none;
+  text-align: left;
 }
 
 #control .control__first__item .subnav__list::first-letter {
@@ -456,13 +457,16 @@ html {
 }
 
 #up_page {
-	position: fixed;
-  right: 30px;
-  bottom: 30px;
+	position: sticky;
   background-color: #d3cbcb;
   display: flex;
+  float: right;
   justify-content: center;
   align-items: center;
+  box-shadow: 0 0 5px 2px #53534a;
+  right: 30px;
+  top: calc(100% - 78px);
+  z-index: 3;
 }
 
 #up_page .up__page__link {
