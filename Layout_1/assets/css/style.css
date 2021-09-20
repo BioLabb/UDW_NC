@@ -141,7 +141,7 @@ html {
 
 #nav .subnav {
   width: 100%;
-  height: 461px;
+  height: 476px;
   background-color: #ddd;
   position: absolute;
   top: 38px;
@@ -378,7 +378,7 @@ html {
 
 #subpage__content .content__img {
 	width: 100%;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 
 #subpage__content .content__img .content__link {
