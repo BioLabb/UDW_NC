@@ -19,6 +19,10 @@ html {
 	clear: both;
 }
 
+.slow__hover__button {
+  transition: all 0.5s ease;
+}
+
 #header {
 	height: 47px;
 	background-color: #b29c6e;
@@ -137,7 +141,7 @@ html {
 
 #nav .subnav {
   width: 100%;
-  height: 476px;
+  height: 461px;
   background-color: #ddd;
   position: absolute;
   top: 38px;
@@ -145,7 +149,7 @@ html {
   list-style-type: none;
   padding: 40px 140px;
   float: left;
-  z-index: 1;
+  z-index: 3;
   display: none;
 }
 
@@ -181,13 +185,12 @@ html {
 #slides .slides-img {
 	width: 100%;
 	max-width: 100%;
-	animation: slide ease 4s;
+	transition: all 5s ease;
 }
 
 #slides .slides-img:hover {
-	animation: slideHover ease-in 4s;
 	transform: scale(1.1);
-	opacity: 0.75;	
+	opacity: 0.8;	
 }
 
 #trademark {
@@ -230,19 +233,18 @@ html {
 }
 
 #trademark .trademark-list-items {
-  width: 33.333%;
-  display: inline;
+  width: 33%;
+  display: inline-block;
 }
 
 #trademark .trader-list-img {
-    max-width: 260px;
-    margin: 0 44px;
-    opacity: 0.5;
-    animation: trademarkImg ease 1s;
+  max-width: 260px;
+  margin: 0 44px;
+  opacity: 0.5;
+  transition: opacity 2s;
 }
 
 #trademark .trader-list-img:hover {
-	animation: trademarkImgHover ease 1s;
 	opacity: 1;
 }
 
@@ -358,6 +360,7 @@ html {
  width: 100%;
  max-width: 1920px;
  padding-top: 30px;
+ margin-top: -30px;
 }
 
 #subpage__content .content__item {
@@ -366,6 +369,7 @@ html {
   text-align: center;
   padding: 0px 15px;
   margin-bottom: 80px;
+  overflow: hidden;
 }
 
 #subpage__content .content__item:hover .link__img {
@@ -382,6 +386,7 @@ html {
 }
 
 #subpage__content .content__img .link__img {
+  transition: all 0.5s ease;
 	width: 100%;
 }
 
@@ -435,24 +440,27 @@ html {
   color: #fff;
   padding: 5px;
   width: 50%;
-  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 #subpage__content .content__buy__about:hover {
+  cursor: pointer;
 	background-color: #fff;
 	color: #53534a;
 }
 
 #subpage__content .content__buy__click {
   display: inline-block;
+  color: #53534a;
   border: 1px solid #d7cfcd;
   padding: 5px;
   width: 50%;
   margin-left: -5px;
-  cursor: pointer;
+	transition: all 0.5s ease;
 }
 
 #subpage__content .content__buy__click:hover {
+  cursor: pointer;
 	background-color: #dbb86f;
 }
 
@@ -481,47 +489,4 @@ html {
 #up_page .up__icon {
 	color: #000;
   opacity: 0.7;
-}
-
-
-
-@keyframes slideHover {
-	from{
-		transform: translateX(0);
-		opacity: 1;
-	}
-	to{
-		transform: scale(1.1);
-		opacity: 0.75;
-	}
-}
-
-@keyframes slide {
-	from{
-		transform: scale(1.1);
-		opacity: 0.75;		
-	}
-	to{
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
-
-
-@keyframes trademarkImgHover {
-	from{
-		opacity: 0.5;
-	}
-	to{
-		opacity: 1;
-	}
-}
-
-@keyframes trademarkImg {
-	from{
-		opacity: 0.9;
-	}
-	to{
-		opacity: 0.5;
-	}
 }
