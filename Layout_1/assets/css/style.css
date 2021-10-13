@@ -24,6 +24,10 @@ html {
 }
 
 #header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:space-between;
 	height: 47px;
 	background-color: #b29c6e;
 }
@@ -33,7 +37,6 @@ html {
 	margin-left: 40px;
 	padding-top: 12px;
 	color: #fff;
-	float: left;
 }
 
 #header a {
@@ -55,7 +58,6 @@ html {
 }
 
 #header .header-right {
-	float: right;
    padding: 6px 40px;
 }
 
@@ -65,7 +67,34 @@ html {
 	display: inline-block;
 	padding-right: 20px;
 }
-
+.shopping-cart{
+  display: inline-block;
+  position: relative;
+}
+#header .header-right .shopping-cart .icon-shopping-cart{
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+#header .header-right .shopping-cart .check-shopping-cart{
+  position: absolute;
+  top:-3px;
+  left:2px;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 100%;
+}
+.hideen-block{
+  display: none;
+}
+.sreach-block{
+  display: inline-block;
+  position: relative;
+  top:-18px;
+  right:0;
+}
 #header .header-search {
 	padding: 8px;
 	border: none;
@@ -75,8 +104,8 @@ html {
   position: absolute;
   color: rgba(0,0,0,0.6);
   font-size: 23px;
-  top: 11px;
-  right: 45px;
+  top: 5px;
+  right: 3px;
 }
 
 #header .header-search-icon:hover {
