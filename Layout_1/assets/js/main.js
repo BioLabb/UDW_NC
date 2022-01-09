@@ -25,6 +25,7 @@ console.log(heightNeed)
 subNav.style.height = heightNeed + 'px';
 
 
+//
 var itemElements = document.querySelectorAll(".content__item");
 itemElements.forEach(item =>{
     item.addEventListener('click', event=>{

@@ -32,15 +32,18 @@
 }
 .noiBac__content{
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .noiBac__content__nav{
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: nowrap;
     margin-top: 50px;
-    overflow: hidden;
     width: 95%;
     height: 330px;
 }
@@ -95,9 +98,11 @@
     display: inline-block;
     overflow: hidden;
     height: 590px;
-    position: absolute;
+    /* position: absolute; */
     top:50px;
     left: 15%;
+    margin: 0 auto;
+    
 }
 .sanPhamMoi__content__nav__ul__li{
     text-align: center;
@@ -157,7 +162,8 @@
 }
 .footer{
     background-color: #efecea;
-    
+    text-align: left;
+    color: #53534a;   
 }
 .footer__nav{
     padding-top: 15px;
@@ -166,6 +172,7 @@
     flex-wrap: nowrap;
     justify-content: space-around;
 }
+
 .footer__nav__title{
     padding-bottom: 10px;
     color: #53534a;
@@ -173,6 +180,10 @@
     font-size: 14px;
     font-style: italic;
     text-transform: uppercase;
+}
+
+.footer__nav__title ul>li>a{
+    color: #53534a;
 }
 .footer__nav ul>li,h5{
     font-style: italic;
