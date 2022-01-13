@@ -2,10 +2,12 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 html {
-	font-family: Arial Helvetica ;
+  font-family: 'Roboto', sans-serif;
 	scroll-behavior: smooth;
 }
 
@@ -25,21 +27,35 @@ html {
 
 #header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
   justify-content:space-between;
+  align-items: center;
 	height: 47px;
 	background-color: #b29c6e;
+  padding: 0 60px;
 }
 
-#header .adress {
-	font-size: 13px;
-	margin-left: 40px;
-	padding-top: 12px;
+.header_left {
+  font-size: 14px;
 	color: #fff;
 }
 
+#header .address-icon {
+	color: #fff;
+}
+
+#header .address-icon:hover {
+	color: yellow;
+	cursor: pointer;
+}
+
+.header_right {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
 #header a {
+  font-size: 14px;
 	color: #fff;
 	text-decoration: none;
 }
@@ -48,64 +64,30 @@ html {
 	opacity: 0.8;
 }
 
-#header .adress-icon {
-	color: #fff;
-}
-
-#header .adress-icon:hover {
-	color: yellow;
-	cursor: pointer;
-}
-
-#header .header-right {
-   padding: 6px 40px;
-}
-
 #header .phone-num {
 	font-size: 14px;
 	color: #fff;
 	display: inline-block;
 	padding-right: 20px;
 }
-.shopping-cart{
-  display: inline-block;
+
+.search_container {
   position: relative;
-}
-#header .header-right .shopping-cart .icon-shopping-cart{
-  display: inline-block;
-  margin-right: 10px;
-  width: 40px;
-  height: 40px;
-}
-#header .header-right .shopping-cart .check-shopping-cart{
-  position: absolute;
-  top:-3px;
-  left:2px;
-  width: 15px;
-  height: 15px;
-  background-color: red;
-  border-radius: 100%;
-}
-.hideen-block{
-  display: none;
-}
-.sreach-block{
-  display: inline-block;
-  position: relative;
-  top:-18px;
-  right:0;
-}
-#header .header-search {
-	padding: 8px;
-	border: none;
 }
 
-#header .header-search-icon {
+.header-search {
+  min-width: 220px;
+	padding: 8px;
+	border: none;
+  outline:none;
+}
+
+.header-search-icon {
   position: absolute;
-  color: rgba(0,0,0,0.6);
-  font-size: 23px;
+  color: #BBB2A6;
+  font-size: 20px;
   top: 5px;
-  right: 3px;
+  right: 10px;
 }
 
 #header .header-search-icon:hover {
@@ -215,6 +197,7 @@ html {
 	width: 100%;
 	max-width: 100%;
 	transition: all 5s ease;
+  z-index: -1;
 }
 
 #slides .slides-img:hover {
@@ -373,7 +356,6 @@ html {
   color: #53534a;
   line-height: 1.35;
   font-size: 12px;
-  font-family: Arial;
   padding: 2px 6px;
 }
 
@@ -433,7 +415,6 @@ html {
 
 #subpage__content .content__discription h4 {
 	font-size: 12px;
-  font-family: Helvetica;
   font-weight: 700;
   padding-bottom: 8px;
 }
