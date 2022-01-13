@@ -1,3 +1,5 @@
+// sử lý các thao tác localStore
+
  export function createItem(id,item){
     localStorage.setItem(id,JSON.stringify(item));
 };
