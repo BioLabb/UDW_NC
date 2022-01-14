@@ -18,11 +18,9 @@ for(var img of imgs)
 
 var slide = document.querySelector(".background__img");
 var subNav = document.querySelector(".subnav");
-var heightNeed = slide.clientHeight + 34;
+// var heightNeed = slide.clientHeight + 34;
 
-console.log(heightNeed)
-
-subNav.style.height = heightNeed + 'px';
+// subNav.style.height = heightNeed + 'px';
 
 
 //
@@ -41,3 +39,12 @@ itemElements.forEach(item =>{
 		setListItem("listItem",JSON.parse(localStorage.getItem('productItem')));
     })
 });
+
+//tạo chuyển động cho ảnh slide trang chủ
+const slideImg = document.querySelector("#slides .slides-img");
+var slideNum = 1;
+
+setInterval(() => {
+    slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
+    slideNum===5 && (slideNum = 1);
+}, 8000)

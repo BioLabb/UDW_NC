@@ -210,7 +210,3 @@ const product = [
         sellPrice: "81,284,000"
     }
 ]
-
-const newArr = product.find(item => item.id === 67803)
-
-console.log(product)
