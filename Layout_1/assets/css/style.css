@@ -293,6 +293,7 @@ html {
   justify-content: space-between;
   margin-top: -4px;
   color: #53534a;
+  padding: 0 30px;
 }
 
 #control h4 {
@@ -368,15 +369,16 @@ html {
 }
 
 #subpage__content {
- width: 100%;
- max-width: 1920px;
- padding-top: 30px;
- margin-top: -30px;
+  width: 100%;
+  max-width: 1920px;
+  /* padding-top: 30px; */
+  margin-top: -30px;
+  padding:30px 50px 0; 
 }
 
 #subpage__content .content__item {
 	display: inline-block;
-  width: 33.1%;
+  width: 33%;
   text-align: center;
   padding: 0px 15px;
   margin-bottom: 80px;
@@ -390,10 +392,6 @@ html {
 #subpage__content .content__img {
 	width: 100%;
   padding-top: 25px;
-}
-
-#subpage__content .content__img .content__link {
-
 }
 
 #subpage__content .content__img .link__img {
@@ -433,14 +431,19 @@ html {
 
 #subpage__content .content__preze__sell {
 	display: inline-block;
-  font-weight: 900;
+  font-weight: 700;
   margin-right: 8px;
   text-decoration: line-through;
+  color: #53534A;
 }
 
 #subpage__content .content__preze__real {
-  font-weight: 900;
-  color: red;
+  font-weight: 700;
+  color: #FF0000;
+}
+
+.content__buy {
+  padding: 0 40px;
 }
 
 #subpage__content .content__buy__about {
@@ -448,6 +451,7 @@ html {
   background-color: #53534a;
   border: 1px solid #d7cfcd;
   color: #fff;
+  font-size:12px;
   padding: 5px;
   width: 50%;
   transition: all 0.5s ease;
@@ -463,6 +467,7 @@ html {
   display: inline-block;
   color: #53534a;
   border: 1px solid #d7cfcd;
+  font-size:12px;
   padding: 5px;
   width: 50%;
   margin-left: -5px;
@@ -499,4 +504,57 @@ html {
 #up_page .up__icon {
 	color: #000;
   opacity: 0.7;
+}
+
+.loading {
+  height:60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.loading-item {
+  width:8px;
+  height: 8px;
+  border-radius:50%;
+  background-color: rgb(75, 142, 180);
+  display:block;
+  animation: loading 3s ease infinite;
+  margin:0 5px;
+}
+
+.loading-item:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.loading-item:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(5px);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
