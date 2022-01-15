@@ -77,6 +77,8 @@ html {
 
 .header-search {
   min-width: 220px;
+  color: #8d8c81;
+  font-style: italic;
 	padding: 8px;
 	border: none;
   outline:none;
@@ -84,7 +86,7 @@ html {
 
 .header-search-icon {
   position: absolute;
-  color: #BBB2A6;
+  color: #53534a;
   font-size: 20px;
   top: 5px;
   right: 10px;

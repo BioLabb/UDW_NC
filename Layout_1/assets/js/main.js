@@ -48,3 +48,9 @@ setInterval(() => {
     slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
     slideNum===5 && (slideNum = 1);
 }, 8000)
+
+//xử lí ô search 
+const search = document.getElementById("search__box");
+search.onkeyup = (e) => {
+    e.keyCode === 13 && search.value !== "" && (search.value = "No data");
+}
