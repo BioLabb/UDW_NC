@@ -5,11 +5,11 @@ var orders = document.querySelectorAll(".content__buy__click");
 var imgs = document.querySelectorAll(".link__img");
 
 function clickOrder () {
-//	alert("Ví của bạn không có tiền. Vui lòng nạp tiền để tiếp tục mua sắm!!");
+	// alert("Ví của bạn không có tiền. Vui lòng nạp tiền để tiếp tục mua sắm!!");
 }
 
 for(var order of orders)
-	order.addEventListener("click", clickOrder());
+	// order.addEventListener("click", clickOrder());
 
 for(var img of imgs)
 	img.addEventListener("click", clickOrder);
@@ -18,11 +18,9 @@ for(var img of imgs)
 
 var slide = document.querySelector(".background__img");
 var subNav = document.querySelector(".subnav");
-var heightNeed = slide.clientHeight + 34;
+// var heightNeed = slide.clientHeight + 34;
 
-console.log(heightNeed)
-
-subNav.style.height = heightNeed + 'px';
+// subNav.style.height = heightNeed + 'px';
 
 
 // block info clock
@@ -43,4 +41,21 @@ itemElements.forEach(item =>{
     })
 });
 
+<<<<<<< HEAD
 // other.html
+=======
+//tạo chuyển động cho ảnh slide trang chủ
+const slideImg = document.querySelector("#slides .slides-img");
+var slideNum = 1;
+
+setInterval(() => {
+    slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
+    slideNum===5 && (slideNum = 1);
+}, 8000)
+
+//xử lí ô search 
+const search = document.getElementById("search__box");
+search.onkeyup = (e) => {
+    e.keyCode === 13 && search.value !== "" && (search.value = "No data");
+}
+>>>>>>> 7ac6da10c1c5ba7168f5b59b88611dba18ccf247
