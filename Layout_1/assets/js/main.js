@@ -1,4 +1,4 @@
-import {createItem, setListItem, getListItem} from './item.js';
+import {createItem, setListItem, getListItem} from './product.js';
 // Mở cửa sổ thông báo khi mua hàng
 
 var orders = document.querySelectorAll(".content__buy__click");
@@ -25,19 +25,22 @@ console.log(heightNeed)
 subNav.style.height = heightNeed + 'px';
 
 
-//
+// block info clock
 var itemElements = document.querySelectorAll(".content__item");
 itemElements.forEach(item =>{
     item.addEventListener('click', event=>{
         var productItem = new Object;
-            productItem.id = item.querySelector("#clock_id").innerText;
-            productItem.real = item.querySelector(".content__preze__real").innerText;
-            productItem.img = item.querySelector(".content__link img").getAttribute("src");
-            if(item.querySelector(".content__preze__sell"))
+            productItem.name = item.querySelector(".content__discription p").innerText;
+            productItem.id = item.querySelector("#clock_id").innerText;     // lấy id clock
+            productItem.real = item.querySelector(".content__preze__real").innerText; // gia bán
+            productItem.img = item.querySelector(".content__link img").getAttribute("src");  // link ảnh
+            if(item.querySelector(".content__preze__sell")) // nếu có giá sale
                 productItem.sell = item.querySelector(".content__preze__sell").innerText;
             else
                 productItem.sell = 0;
-        createItem("productItem",JSON.stringify(productItem));
-		setListItem("listItem",JSON.parse(localStorage.getItem('productItem')));
+        createItem("productItem",productItem);
+		//setListItem("listItem",JSON.parse(localStorage.getItem('productItem')));
     })
 });
+
+// other.html

@@ -1,7 +1,8 @@
 // sử lý các thao tác localStore
 
  export function createItem(id,item){
-    localStorage.setItem(id,JSON.stringify(item));
+     localStorage.setItem(id,JSON.stringify(item));
+    // localStorage.setItem(id,item);
 };
 
 export function setListItem(listName,item){
@@ -20,8 +21,7 @@ export function setListItem(listName,item){
 
 export function getListItem(listName){
     if(localStorage.getItem(listName)){
-        const arr = new Array;
-        arr = JSON.parse(localStorage.getItem(listName));
+        var arr = JSON.parse(localStorage.getItem(listName));
         return arr;
     }
     return undefined;
