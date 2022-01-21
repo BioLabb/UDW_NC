@@ -30,8 +30,28 @@ itemElements.forEach(item =>{
         var productItem = new Object;
             productItem.name = item.querySelector(".content__discription p").innerText;
             productItem.id = item.querySelector("#clock_id").innerText;     // lấy id clock
-            productItem.real = item.querySelector(".content__preze__real").innerText; // gia bán
+            productItem.sell = item.querySelector(".content__preze__sell").innerText;
             productItem.img = item.querySelector(".content__link img").getAttribute("src");  // link ảnh
+            if(item.querySelector(".content__preze__real")) // nếu có giá sale
+                productItem.real = item.querySelector(".content__preze__real").innerText; // gia bán
+            else
+                productItem.sell = 0;
+        createItem("productItem",productItem);
+		//setListItem("listItem",JSON.parse(localStorage.getItem('productItem')));
+    })
+});
+
+//index.html
+var itemElements = document.querySelectorAll(".sanPhamMoi__content__nav__ul__li");
+itemElements.forEach(item =>{
+    item.addEventListener('click', event=>{
+        var productItem = new Object;
+            productItem.name = item.querySelector(".name").innerText;
+            productItem.id = item.querySelector("#clock_id").innerText;     // lấy id clock
+            // productItem.real = item.querySelector(".").innerText; // gia bán
+            productItem.sell = "Sắp có";
+            var str = "." + item.querySelector(".sanPhamMoi__content__nav__ul__li__a img").getAttribute("src").slice(10);  // link ảnh
+            productItem.img = str
             if(item.querySelector(".content__preze__sell")) // nếu có giá sale
                 productItem.sell = item.querySelector(".content__preze__sell").innerText;
             else
@@ -41,9 +61,6 @@ itemElements.forEach(item =>{
     })
 });
 
-<<<<<<< HEAD
-// other.html
-=======
 //tạo chuyển động cho ảnh slide trang chủ
 const slideImg = document.querySelector("#slides .slides-img");
 var slideNum = 1;
@@ -58,4 +75,3 @@ const search = document.getElementById("search__box");
 search.onkeyup = (e) => {
     e.keyCode === 13 && search.value !== "" && (search.value = "No data");
 }
->>>>>>> 7ac6da10c1c5ba7168f5b59b88611dba18ccf247
