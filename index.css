@@ -17,7 +17,8 @@
     padding: 30px;
 }
 .noiBac__header__text{
-    font-size: 20px;
+    font-size: 25px;
+    color: #53534a;
     
 }
 /* dấu gạch hai bên tiêu đề */
@@ -28,7 +29,7 @@
     width: 60px;
     margin: 0 10px;
     position: relative;
-    top:-4px;
+    top:-6px;
 }
 .noiBac__content{
     display: flex;
@@ -77,7 +78,7 @@
 }
 .sanPhamMoi__header p{
     padding-top: 30px;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Swiss721BT-LightExtended';
     color: #53534a;
 }
@@ -85,10 +86,10 @@
     content: "";
     display: inline-block;
     border-bottom: 1px solid #bfbbb9;
-    width: 60px;
+    width: 80px;
     margin: 0 10px;
     position: relative;
-    top:-4px;    
+    top:-6px;    
 }
 .sanPhamMoi__content{
     position: relative;
@@ -286,9 +287,33 @@
     font-family: initial;
 }
 .footer__nav__link-social--link__icon img{
+    border-radius: 10px;
     width: 40px;
     height: 40px;
     margin: 0 7px;
+}
+.footer-bottom{
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    background-color: #a6a3a3;
+    padding-top: 10px;
+    line-height: 25px;
+}
+
+.icon-mess{
+    position: fixed;
+    right: 10px;
+    bottom: 12px;
+
+}
+.footer-bottom p{
+    font-size: 13px;
+}
+
+.icon-mess img{
+    width: 55px;
+    padding-bottom: 10px;
 }
 .underline:hover{
     text-decoration: underline;
