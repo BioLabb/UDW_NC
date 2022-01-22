@@ -41,12 +41,9 @@ itemElements.forEach(item =>{
     })
 });
 
-<<<<<<< HEAD
-// other.html
-=======
 //tạo chuyển động cho ảnh slide trang chủ
 const slideImg = document.querySelector("#slides .slides-img");
-var slideNum = 1;
+let slideNum = 1;
 
 setInterval(() => {
     slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
@@ -58,4 +55,3 @@ const search = document.getElementById("search__box");
 search.onkeyup = (e) => {
     e.keyCode === 13 && search.value !== "" && (search.value = "No data");
 }
->>>>>>> 7ac6da10c1c5ba7168f5b59b88611dba18ccf247
