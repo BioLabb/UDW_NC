@@ -30,12 +30,12 @@ itemElements.forEach(item =>{
         var productItem = new Object;
             productItem.name = item.querySelector(".content__discription p").innerText;
             productItem.id = item.querySelector("#clock_id").innerText;     // lấy id clock
-            productItem.sell = item.querySelector(".content__preze__sell").innerText;
+            productItem.sell = item.querySelector(".content__preze__real").innerText;
             productItem.img = item.querySelector(".content__link img").getAttribute("src");  // link ảnh
-            if(item.querySelector(".content__preze__real")) // nếu có giá sale
-                productItem.real = item.querySelector(".content__preze__real").innerText; // gia bán
-            else
-                productItem.sell = 0;
+            // if(item.querySelector(".content__preze__real")) // nếu có giá sale
+            //     productItem.real = item.querySelector(".content__preze__real").innerText; // gia bán
+            // else
+            //     productItem.sell = 0;
         createItem("productItem",productItem);
 		//setListItem("listItem",JSON.parse(localStorage.getItem('productItem')));
     })
@@ -62,16 +62,16 @@ itemElements.forEach(item =>{
 });
 
 //tạo chuyển động cho ảnh slide trang chủ
-const slideImg = document.querySelector("#slides .slides-img");
-var slideNum = 1;
+// const slideImg = document.querySelector("#slides .slides-img");
+// var slideNum = 1;
 
-setInterval(() => {
-    slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
-    slideNum===5 && (slideNum = 1);
-}, 8000)
+// setInterval(() => {
+//     slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
+//     slideNum===5 && (slideNum = 1);
+// }, 8000)
 
-//xử lí ô search 
-const search = document.getElementById("search__box");
-search.onkeyup = (e) => {
-    e.keyCode === 13 && search.value !== "" && (search.value = "No data");
-}
+// //xử lí ô search 
+// const search = document.getElementById("search__box");
+// search.onkeyup = (e) => {
+//     e.keyCode === 13 && search.value !== "" && (search.value = "No data");
+// }
