@@ -1,4 +1,4 @@
-import {createItem, setListItem, getListItem} from './product.js';
+import {createItem, setListItem, getListItem} from './item.js';
 // Mở cửa sổ thông báo khi mua hàng
 
 var orders = document.querySelectorAll(".content__buy__click");
@@ -30,12 +30,12 @@ itemElements.forEach(item =>{
         var productItem = new Object;
             productItem.name = item.querySelector(".content__discription p").innerText;
             productItem.id = item.querySelector("#clock_id").innerText;     // lấy id clock
-            productItem.sell = item.querySelector(".content__preze__real").innerText;
+            productItem.real = item.querySelector(".content__preze__real").innerText;
             productItem.img = item.querySelector(".content__link img").getAttribute("src");  // link ảnh
-            // if(item.querySelector(".content__preze__real")) // nếu có giá sale
-            //     productItem.real = item.querySelector(".content__preze__real").innerText; // gia bán
-            // else
-            //     productItem.sell = 0;
+            if(item.querySelector(".content__preze__sell")) // nếu có giá sale
+                productItem.real = item.querySelector(".content__preze__sell").innerText; // gia bán
+            else
+                productItem.sell = undefined;
         createItem("productItem",productItem);
 		//setListItem("listItem",JSON.parse(localStorage.getItem('productItem')));
     })
@@ -49,7 +49,7 @@ itemElements.forEach(item =>{
             productItem.name = item.querySelector(".name").innerText;
             productItem.id = item.querySelector("#clock_id").innerText;     // lấy id clock
             // productItem.real = item.querySelector(".").innerText; // gia bán
-            productItem.sell = "Sắp có";
+            productItem.real = "Sắp có";
             var str = "." + item.querySelector(".sanPhamMoi__content__nav__ul__li__a img").getAttribute("src").slice(10);  // link ảnh
             productItem.img = str
             if(item.querySelector(".content__preze__sell")) // nếu có giá sale
@@ -62,16 +62,16 @@ itemElements.forEach(item =>{
 });
 
 //tạo chuyển động cho ảnh slide trang chủ
-const slideImg = document.querySelector("#slides .slides-img");
-let slideNum = 1;
+// const slideImg = document.querySelector("#slides .slides-img");
+// let slideNum = 1;
 
-setInterval(() => {
-    slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
-    slideNum===5 && (slideNum = 1);
-}, 8000)
+// setInterval(() => {
+//     slideImg.src = `./Layout_1/assets/images/slides/slide${slideNum++}.png`;
+//     slideNum===5 && (slideNum = 1);
+// }, 8000)
 
-//xử lí ô search 
-const search = document.getElementById("search__box");
-search.onkeyup = (e) => {
-    e.keyCode === 13 && search.value !== "" && (search.value = "No data");
-}
+// //xử lí ô search 
+// const search = document.getElementById("search__box");
+// search.onkeyup = (e) => {
+//     e.keyCode === 13 && search.value !== "" && (search.value = "No data");
+// }
