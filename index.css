@@ -271,12 +271,14 @@
 }
 .footer__nav__link-social--input input{
     border-radius: 5px;
+    padding-left: 8px;
     margin: 4px 0;
     width: 100%;
     height: 100%;
 }
 .footer__nav__link-social--input input[type=zalo]{
     border-radius: 5px 0 0 5px;
+    padding-left: 8px;
 }
 .footer__nav__link-social--input input[type=submit]{
     display:block;
