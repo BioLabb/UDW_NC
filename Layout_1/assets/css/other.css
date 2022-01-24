@@ -58,6 +58,7 @@ textarea{
     font-size: 14px;
     border: 1px solid #d7cfcd !important;
     font-family: Arial;
+    resize: none;
 }
 
 .input-text, .input-select,.input,.input-button{
