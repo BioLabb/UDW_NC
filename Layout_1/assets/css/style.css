@@ -2,8 +2,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-
 }
 
 html {
@@ -647,6 +645,7 @@ html {
 
 #comment {
   text-align: left;
+  margin-bottom: 14px;
 }
 
 .comment__content {
@@ -671,9 +670,10 @@ html {
 .comment__submit {
   border: 1px solid #ccc;
   border-radius: 5px;
+  width: 90px;
+  float: right;
   padding: 6px 34px;
   background-color: #dbb86f;
-  margin-bottom: 14px;
 }
 
 .comment__submit:hover {
