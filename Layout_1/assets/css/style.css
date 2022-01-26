@@ -398,7 +398,7 @@ html {
 
 #subpage__content .content__img .link__img {
   transition: all 0.5s ease;
-	width: 100%;
+	width: 80%;
 }
 
 
@@ -830,6 +830,7 @@ html {
 .product__buy-order-more:hover::after {
   background-color: #fff;
   color: #53534A;
+  cursor: pointer;
 }
 
 .product__buy-pay {
@@ -862,4 +863,5 @@ html {
 .product__buy-pay-offline:hover,
 .product__buy-pay-online:hover {
   background-color: #fff;
+  cursor: pointer;
 }
