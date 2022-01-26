@@ -26,7 +26,7 @@ for(var img of imgs)
             productItem.real = item.querySelector(".content__preze__real").innerText;
             productItem.img = item.querySelector(".content__link img").getAttribute("src");  // link ảnh
             if(item.querySelector(".content__preze__sell")) // nếu có giá sale
-                productItem.real = item.querySelector(".content__preze__sell").innerText; // gia bán
+                productItem.sell = item.querySelector(".content__preze__sell").innerText; // gia bán
             else
             productItem.sell = undefined;
         createItem("productItem",productItem);
