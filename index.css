@@ -300,10 +300,13 @@
 .footer-bottom{
     margin: 0 auto;
     text-align: center;
-    color: #ffffff;
+    color: #ffffff !important;
     background-color: #a6a3a3;
     padding-top: 10px;
     line-height: 25px;
+}
+.footer-bottom h5,.footer-bottom p{
+    color: #ffffff;
 }
 
 .icon-mess{
